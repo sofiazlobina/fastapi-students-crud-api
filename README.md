@@ -29,3 +29,7 @@ CRUD API для работы с базой студентов + аналитик
 
 ```bash
 uvicorn app.main:app --reload
+```
+
+## Swagger
+http://127.0.0.1:8000/docs

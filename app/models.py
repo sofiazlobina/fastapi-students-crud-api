@@ -1,13 +1,20 @@
 from sqlalchemy import Column, Integer, String
-from .database import Base
+from app.database import Base
 
-
-class StudentGrade(Base):
-    __tablename__ = "student_grades"
+class Student(Base):
+    __tablename__ = "students"
 
     id = Column(Integer, primary_key=True, index=True)
-    last_name = Column(String)
     first_name = Column(String)
+    last_name = Column(String)
     faculty = Column(String)
-    subject = Column(String)
+    course = Column(String)
     grade = Column(Integer)
+
+
+class User(Base):
+    __tablename__ = "users"
+
+    id = Column(Integer, primary_key=True)
+    username = Column(String, unique=True)
+    password = Column(String)
